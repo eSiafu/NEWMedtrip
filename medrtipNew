@@ -1,0 +1,52 @@
+<!-- LOGO -->
+<a href="index.html" style="text-decoration:none;flex-shrink:0">
+  <div class="logo-afri">Afri<span class="logo-med">Med</span><span class="logo-trip">Trip</span></div>
+</a>
+
+<!-- NAV LINKS (desktop) -->
+<div style="display:flex;align-items:center;gap:26px" class="hidden md:flex">
+  <a href="pages/rotations.html" class="nav-link" data-i="nav.rotations">Rotations</a>
+  <a href="pages/safari.html" class="nav-link" data-i="nav.safari">Safari</a>
+  <a href="pages/medical-travel.html" class="nav-link" data-i="nav.travel">Medical Travel</a>
+  <a href="pages/how-it-works.html" class="nav-link" data-i="nav.hiw">How It Works</a>
+</div>
+
+<!-- RIGHT ACTIONS -->
+<div style="display:flex;align-items:center;gap:8px;flex-shrink:0">
+
+  <!-- SCHEDULE PILL (always visible) -->
+  <a href="pages/schedule.html" class="schedule-pill hidden sm:inline-flex">
+    <span class="schedule-dot"></span>
+    <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 10l4.553-2.069A1 1 0 0121 8.82v6.361a1 1 0 01-1.447.894L15 14M3 8a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2V8z"/></svg>
+    <span data-i="nav.schedule">Schedule Zoom</span>
+  </a>
+
+  <!-- Language -->
+  <div style="position:relative" id="langWrap">
+    <button onclick="toggleLang()" class="lang-btn">
+      <span id="langFlag">🇬🇧</span><span id="langCode">EN</span>
+      <svg width="10" height="10" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></svg>
+    </button>
+    <div class="lang-dropdown" id="langDrop">
+      <div class="lang-opt active" onclick="setLang('en')">🇬🇧 English</div>
+      <div class="lang-opt" onclick="setLang('fr')">🇫🇷 Français</div>
+      <div class="lang-opt" onclick="setLang('es')">🇪🇸 Español</div>
+      <div class="lang-opt" onclick="setLang('de')">🇩🇪 Deutsch</div>
+      <div class="lang-opt" onclick="setLang('sw')">🇹🇿 Kiswahili</div>
+      <div class="lang-opt" onclick="setLang('ar')">🇸🇦 العربية</div>
+      <div class="lang-opt" onclick="setLang('ko')">🇰🇷 한국어</div>
+    </div>
+  </div>
+
+  <!-- Login/Avatar -->
+  <button id="loginBtn" onclick="openModal('authModal')" class="hidden md:block" style="font-size:0.75rem;font-weight:700;color:rgba(255,255,255,0.8);border:1px solid rgba(255,255,255,0.22);background:none;padding:6px 14px;border-radius:8px;cursor:pointer;transition:all 0.2s;font-family:'DM Sans',sans-serif" data-i="nav.login">Log In</button>
+  <div id="userAvatar" style="display:none;width:32px;height:32px;border-radius:50%;background:var(--savanna);color:white;font-weight:700;font-size:0.85rem;align-items:center;justify-content:center;cursor:pointer" onclick="userMenuToggle()"></div>
+
+  <!-- Apply CTA -->
+  <a href="pages/apply.html" class="hidden sm:block" style="font-size:0.77rem;font-weight:700;background:var(--savanna);color:white;padding:8px 18px;border-radius:10px;text-decoration:none;transition:all 0.2s;letter-spacing:0.02em" data-i="nav.apply">Apply Now</a>
+
+  <!-- Hamburger -->
+  <button id="hambBtn" onclick="toggleMob()" style="display:none;color:white;background:none;border:none;cursor:pointer;padding:4px" class="md:hidden">
+    <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="19" y2="6"/><line x1="3" y1="12" x2="19" y2="12"/><line x1="3" y1="18" x2="19" y2="18"/></svg>
+  </button>
+</div>
